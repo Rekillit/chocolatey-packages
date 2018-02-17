@@ -3,9 +3,9 @@
   <metadata>
     <id>nim</id>
     <title>Nim Compiler</title>
-    <version>0.11.2</version>
+    <version>0.17.2</version>
     <authors>Andreas Rumpf</authors>
-    <owners>Pine Mizune</owners>
+    <owners>Pine Mizune, Rekillit</owners>
     <summary>Nim (formerly known as "Nimrod") is a compiled, garbage-collected systems programming language.</summary>
     <description>Nim (formerly known as "Nimrod") is a compiled, garbage-collected systems programming language which has an excellent productivity/performance ratio. Nim's design focuses on efficiency, expressiveness, elegance (in the order of priority).</description>
     <projectUrl>http://nim-lang.org</projectUrl>
