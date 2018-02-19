@@ -1,15 +1,15 @@
 ﻿$packageName = 'nim'
 $version = '0.17.2'
-$fileType = 'zip'
 $url = 'https://nim-lang.org/download/nim-0.17.2_x32.zip'
-$unzip = '$env:ChocolateyBinRoot'
 $url64 = 'https://nim-lang.org/download/nim-0.17.2_x64.zip'
 
-Install-ChocolateyZipPackage -PackageName $packageName $url $unzip $url64
+$binRoot = Get-BinRoot
+Write-Debug "Bin Root is $binRoot"
 
-$path = '$env:ChocolateyBinRoot/nim-0.17.2/bin'
+Install-ChocolateyZipPackage "$packageName" $url $binRoot $url64
 
-Install-ChocolateyPath `
-  -PathToInstall $path `
-  -PathType 'Machine'
+$installDir = Join-Path "$binRoot" "nim-0.17.2"
+Write-Host "Adding Nim to Path"
+Install-ChocolateyPath "$installDir\bin" 'Machine'
 
+Update-SessionEnvironment
